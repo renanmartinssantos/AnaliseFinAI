@@ -1,24 +1,104 @@
-# Projeto
-O projeto é um aplicativo de chat que integra funcionalidades de mensagens em tempo real com análise de notícias financeiras. Utiliza-se o Firebase para autenticação de usuários e gerenciamento de dados, enquanto a análise de sentimentos das notícias é realizada por meio de modelos de aprendizado de máquina, como o FinBERT-PT-BR. O aplicativo é desenvolvido em React Native com o EXPO, permitindo que os usuários interajam com um bot e entre si em um ambiente de chat.
+![Miniature](https://user-images.githubusercontent.com/43630417/167732465-f02c0dea-48db-4e23-ab26-90ca69115251.png)
+# Chat App using React Native Expo and Firebase
 
-## Funcionalidades do Aplicativo
-Autenticação de Usuários: Os usuários podem se cadastrar e fazer login utilizando e-mail e senha, com suporte para login via Google.
-Mensagens em Tempo Real: Utiliza o GiftedChat para gerenciar e exibir mensagens em tempo real, permitindo que os usuários enviem e recebam mensagens instantaneamente.
-Análise de Notícias: O aplicativo busca e analisa notícias financeiras, utilizando o modelo FinBERT-PT-BR para determinar o sentimento das notícias (positivo, negativo ou neutro).
-Exibição de Resultados: Os resultados da análise de sentimentos são estruturados em JSON e apresentados aos usuários, permitindo que eles vejam a interpretação das notícias e seu impacto.
-## Utilização do Processo
-Cadastro e Login: O usuário se cadastra no aplicativo e faz login. As informações são armazenadas no Firestore.
-Interação no Chat: Os usuários podem interagir no chat, enviando mensagens e recebendo respostas do bot.
-Análise de Notícias: O aplicativo busca notícias financeiras e as envia para a API para análise.
-Processamento com FinBERT: A API utiliza o modelo FinBERT-PT-BR para analisar o sentimento das notícias.
-Estruturação do Retorno: O resultado da análise é estruturado em JSON pelo modelo Lhama 1b, que organiza as informações de forma que possam ser facilmente consumidas pelo aplicativo.
-Exibição dos Resultados: Os resultados da análise são exibidos no aplicativo, permitindo que os usuários vejam a interpretação das notícias e seu impacto.
-## API Utilizada
-Flask API: A API é construída utilizando Flask, um microframework para Python que facilita a criação de APIs RESTful. A API é responsável por receber as solicitações do aplicativo, processar as análises e retornar os resultados.
-## Modelos de Análise:
-FinBERT-PT-BR: Um modelo de aprendizado de máquina treinado para análise de sentimentos em textos financeiros em português. Ele classifica as notícias como positivas, negativas ou neutras, ajudando os usuários a entenderem o sentimento do mercado.
-Lhama 1b: Um modelo que estrutura o retorno da análise do FinBERT em um formato JSON. Isso permite que os dados sejam facilmente integrados e utilizados dentro do aplicativo, proporcionando uma experiência de usuário mais fluida.
-###
-O projeto combina a funcionalidade de um aplicativo de chat com a análise de sentimentos de notícias financeiras, utilizando tecnologias modernas como Firebase, React Native, Flask, PostgreSQL e Docker. Isso resulta em uma ferramenta poderosa para usuários que desejam se manter informados sobre o mercado financeiro e interagir em um ambiente de chat dinâmico, tudo isso rodando em um servidor de baixo custo, no qual, para melhor serviço, deverá estar em um servidor como AWS, GCP ou AZURE.
+- See a video tutorial showing how to clone this repository 👉🏼 [https://www.youtube.com/watch?v=iHrTQDHq1WI&t=385s](https://www.youtube.com/watch?v=iHrTQDHq1WI&t=385s)
 
-No Repositório não está incluso a API.
+- Check out the Tutorial 👉🏼 [https://www.youtube.com/watch?v=B6bKBiljKxU&t=323s](https://www.youtube.com/watch?v=B6bKBiljKxU&t=323s)
+
+## How to clone
+
+Clone the repo
+
+```
+git clone https://github.com/betomoedano/ChatApp.git
+```
+
+cd into the just created project and install dependencies with yarn
+
+```
+cd ChatApp && yarn
+```
+
+Add your firebase backend config in the `firebase.js` file
+
+```
+const firebaseConfig = {
+  apiKey: Constants.expoConfig.extra.apiKey,
+  authDomain: Constants.expoConfig.extra.authDomain,
+  projectId: Constants.expoConfig.extra.projectId,
+  storageBucket: Constants.expoConfig.extra.storageBucket,
+  messagingSenderId: Constants.expoConfig.extra.messagingSenderId,
+  appId: Constants.expoConfig.extra.appId,
+  databaseURL: Constants.expoConfig.extra.databaseURL,
+  //   @deprecated is deprecated Constants.manifest
+};
+```
+
+Run the project
+
+```
+expo start
+```
+
+Congratulations 🎉 Now you have a functional Chat App working locally
+
+Subscribe to [my channel](https://youtube.com/c/BetoMoedano)
+
+## Known issues
+
+Expo SDK and libreries are always updating their versions and deprecating others. before installing the libreries run.
+
+```
+yarn add expo@latest
+```
+
+Next you can run:
+
+```
+    npx expo install --fix
+```
+
+Older versions of `react-native-gifted-chat` have a some issues. make sure you have the latest.
+
+```
+npx expo install react-native-gifted-chat@latest
+```
+
+Expo will show you what dependencies need to be updated. Install the dependencies expo suggest you. It is possible that there is cache and you have to run.
+
+```
+yarn start --reset-cache
+```
+
+## Support My Work
+
+If you find this project helpful and want to support my work, the best way is by enrolling in one of my courses:
+
+- **React Native Course**: [codewithbeto.dev/learn](https://codewithbeto.dev/learn)
+- **React with TypeScript Course**: [codewithbeto.dev/learnReact](https://codewithbeto.dev/learnReact)
+- **Git & GitHub Course**: [codewithbeto.dev/learnGit](https://codewithbeto.dev/learnGit)
+
+For other ways to support my work, please consider:
+
+- **Become a Code with Beto channel member**: [YouTube Membership](https://www.youtube.com/channel/UCh247h68vszOMA_OWpGEa5g/join)
+- **GitHub Sponsors**: [Sponsor Me](https://github.com/sponsors/betomoedano)
+
+You can also support me by using my referral links:
+
+- Get an exclusive 40% discount on CodeCrafters: [Referral Link](https://app.codecrafters.io/join?via=betomoedano)
+- Get a 10% discount on Vexo Analytics with code "BETO10": [Vexo](https://vexo.co)
+- Sign up for Robinhood and we'll both pick our own gift stock 🎁: [Robinhood](https://join.robinhood.com/albertm-8254f5)
+- Get 500 MB of Dropbox storage: [Dropbox](https://www.dropbox.com/referrals/AAC52bYrrPqp8FZ7K5gxa-I74wecLpiQuB4?src=global9)
+
+Your support helps me keep creating amazing projects!
+
+
+## Connect with Me
+
+- **Website**: [Code With Beto](https://codewithbeto.dev)
+- **X (formerly Twitter)**: [@betomoedano](https://x.com/betomoedano)
+- **GitHub**: [betomoedano](https://github.com/betomoedano)
+- **LinkedIn**: [Beto Moedano](https://www.linkedin.com/in/betomoedano/)
+- **Discord**: [Join Our Community](https://discord.com/invite/G2RnuUD8)
+- **Medium**: [@betomoedano01](https://medium.com/@betomoedano01)
+- **Figma**: [betomoedano](https://www.figma.com/@betomoedano)
