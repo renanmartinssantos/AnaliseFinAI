@@ -19,6 +19,6 @@ Flask API: A API é construída utilizando Flask, um microframework para Python 
 FinBERT-PT-BR: Um modelo de aprendizado de máquina treinado para análise de sentimentos em textos financeiros em português. Ele classifica as notícias como positivas, negativas ou neutras, ajudando os usuários a entenderem o sentimento do mercado.
 Lhama 1b: Um modelo que estrutura o retorno da análise do FinBERT em um formato JSON. Isso permite que os dados sejam facilmente integrados e utilizados dentro do aplicativo, proporcionando uma experiência de usuário mais fluida.
 ###
-O projeto combina a funcionalidade de um aplicativo de chat com a análise de sentimentos de notícias financeiras, utilizando tecnologias modernas como Firebase, React Native, Flask e modelos de aprendizado de máquina. Isso resulta em uma ferramenta poderosa para usuários que desejam se manter informados sobre o mercado financeiro e interagir em um ambiente de chat dinâmico.
+O projeto combina a funcionalidade de um aplicativo de chat com a análise de sentimentos de notícias financeiras, utilizando tecnologias modernas como Firebase, React Native, Flask, PostgreSQL e Docker. Isso resulta em uma ferramenta poderosa para usuários que desejam se manter informados sobre o mercado financeiro e interagir em um ambiente de chat dinâmico, tudo isso rodando em um servidor de baixo custo, no qual, para melhor serviço, deverá estar em um servidor como AWS, GCP ou AZURE.
 
 No Repositório não está incluso a API.
