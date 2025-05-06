@@ -1,6 +1,6 @@
 # O Projeto
 
-O projeto é um aplicativo de chat que integra funcionalidades de mensagens em tempo real com análise de notícias financeiras. Utiliza-se o Firebase para autenticação de usuários e gerenciamento de dados, enquanto a análise de sentimentos das notícias é realizada por meio de modelos de aprendizado de máquina, como o FinBERT-PT-BR. O aplicativo é desenvolvido em React Native, permitindo que os usuários interajam com um bot e entre si em um ambiente de chat.
+O projeto é um aplicativo de chat que integra funcionalidades de mensagens em tempo real com análise de notícias financeiras. Utiliza-se o Firebase para autenticação de usuários e gerenciamento de dados, enquanto a análise de sentimentos das notícias é realizada por meio de modelos de aprendizado de máquina, como o FinBERT-PT-BR. O aplicativo é desenvolvido em React Native com EXPO, permitindo que os usuários interajam com um bot e entre si em um ambiente de chat.
 
 ## Funcionalidades do Aplicativo
 Autenticação de Usuários: Os usuários podem se cadastrar e fazer login utilizando e-mail e senha, com suporte para login via Google.
